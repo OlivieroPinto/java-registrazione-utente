@@ -24,36 +24,14 @@ public class Utente {
 	}
 
 	// costruttore
-	public Utente(String email, String password, int eta) throws Exception {
-		super();
+	public Utente(String email, int eta, String password) throws Exception {
 		this.email = email;
 		this.password = password;
 		this.eta = eta;
-	}
 
-	// getter and setter
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public int getEta() {
-		return eta;
-	}
-
-	public void setEta(int eta) {
-		this.eta = eta;
+		this.verificaMail();
+		this.verificaPassword();
+		this.verificaEta();
 	}
 
 }
